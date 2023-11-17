@@ -5,8 +5,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	validator "github.com/mwitkow/go-proto-validators"
-	"github.com/pseudomuto/protoc-gen-doc/extensions"
-	. "github.com/pseudomuto/protoc-gen-doc/extensions/validator_field"
+	"github.com/n404an/protoc-gen-doc/extensions"
 	"github.com/stretchr/testify/require"
 )
 

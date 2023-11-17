@@ -1,10 +1,10 @@
 package gendoc_test
 
 import (
+	gendoc "github.com/n404an/protoc-gen-doc"
 	html "html/template"
 	"testing"
 
-	. "github.com/pseudomuto/protoc-gen-doc"
 	"github.com/stretchr/testify/require"
 )
 
@@ -18,7 +18,7 @@ func TestPFilter(t *testing.T) {
 	}
 
 	for input, output := range tests {
-		require.Equal(t, html.HTML(output), PFilter(input))
+		require.Equal(t, html.HTML(output), gendoc.PFilter(input))
 	}
 }
 
@@ -32,7 +32,7 @@ func TestParaFilter(t *testing.T) {
 	}
 
 	for input, output := range tests {
-		require.Equal(t, output, ParaFilter(input))
+		require.Equal(t, output, gendoc.ParaFilter(input))
 	}
 }
 
@@ -46,7 +46,7 @@ func TestNoBrFilter(t *testing.T) {
 	}
 
 	for input, output := range tests {
-		require.Equal(t, output, NoBrFilter(input))
+		require.Equal(t, output, gendoc.NoBrFilter(input))
 	}
 }
 
@@ -59,6 +59,6 @@ func TestAnchorFilter(t *testing.T) {
 	}
 
 	for input, output := range tests {
-		require.Equal(t, output, AnchorFilter(input))
+		require.Equal(t, output, gendoc.AnchorFilter(input))
 	}
 }
